@@ -1,27 +1,27 @@
-import logo from '../Assets/logo.svg';
 import './Home.css';
-import SearchBar from '../Components/SearchBar';
 import Header from '../Components/Header';
+import Footer from '../Components/Footer';
 
 function Home() {
     return (
-        <div className="Home">
+        <div className="home">
             <Header/>
-            <header className="Home-header">
-                <img src={logo} className="Home-logo" alt="logo" />
-                <p>
-                    Edit <code>src/Home.js</code> and save to reload.
-                </p>
-                <a
-                className="Home-link"
-                href="https://reactjs.org"
-                target="_blank"
-                rel="noopener noreferrer"
-                >
-                Learn React
-                </a>
-            </header>
-    </div>
+            <main>
+                <div className='actus'>
+                    <h2>Actus récentes</h2>
+                </div>
+                <div className='jeux-populaires'>
+                    <h2>Jeux Populaires</h2>
+                </div>
+                <div className='tendances'>
+                    <h2>Tendances en ce moment</h2>
+                </div>
+                <div className='communauté'>
+                    <h2>Communautés</h2>
+                </div>
+            </main>
+            <Footer/>
+        </div>
     );
 }
 
