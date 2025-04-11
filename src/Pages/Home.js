@@ -1,10 +1,12 @@
-import logo from '../logo.svg';
-import '../Home.css';
+import logo from '../Assets/logo.svg';
+import './Home.css';
 import SearchBar from '../Components/SearchBar';
+import Header from '../Components/Header';
 
 function Home() {
     return (
         <div className="Home">
+            <Header/>
             <header className="Home-header">
                 <img src={logo} className="Home-logo" alt="logo" />
                 <p>
@@ -19,7 +21,6 @@ function Home() {
                 Learn React
                 </a>
             </header>
-        <SearchBar/>
     </div>
     );
 }
