@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { searchGames } from '../services/rawgAPI';
-import './SearchBar.css'; 
+import styles from './SearchBar.module.css'; // Updated import to use the .module.css format
 
 export default function SearchBar() {
   const [query, setQuery] = useState('');
@@ -37,7 +37,7 @@ export default function SearchBar() {
 
   useEffect(() => {
     function handleClickOutside(event) {
-      if (!event.target.closest('.search-container')) {
+      if (!event.target.closest(`.${styles.searchContainer}`)) {
         setShowResults(false);
       }
     }
@@ -47,42 +47,42 @@ export default function SearchBar() {
   }, []);
 
   return (
-    <div className="search-container">
-      <div className="search-input-container">
+    <div className={styles.searchContainer}>
+      <div className={styles.searchInputContainer}>
         <input
           type="text"
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           onFocus={() => games.length > 0 && setShowResults(true)}
           placeholder="Rechercher un jeu..."
-          className="search-input"
+          className={styles.searchInput}
         />
-        {loading && <div className="loading-indicator">Chargement...</div>}
+        {loading && <div className={styles.loadingIndicator}>Chargement...</div>}
       </div>
       
-      {error && <div className="error-message">{error}</div>}
+      {error && <div className={styles.errorMessage}>{error}</div>}
       
       {showResults && games.length > 0 && (
-        <div className="search-results">
-          <div className="results-header">Jeux</div>
+        <div className={styles.searchResults}>
+          <div className={styles.resultsHeader}>Jeux</div>
           {games.map((game) => (
-            <div key={game.id} className="game-item">
-              <div className="game-image">
+            <div key={game.id} className={styles.gameItem}>
+              <div className={styles.gameImage}>
                 {game.image ? (
                   <img src={game.image} alt={game.name} />
                 ) : (
-                  <div className="no-image">No Image</div>
+                  <div className={styles.noImage}>No Image</div>
                 )}
               </div>
-              <div className="game-info">
-                <div className="game-title">{game.name}</div>
-                <div className="game-details">
+              <div className={styles.gameInfo}>
+                <div className={styles.gameTitle}>{game.name}</div>
+                <div className={styles.gameDetails}>
                   {game.released && <span>({game.released})</span>}
-                  {game.platforms && <span className="platforms">{game.platforms}</span>}
+                  {game.platforms && <span className={styles.platforms}>{game.platforms}</span>}
                 </div>
                 {game.rating && (
-                  <div className="game-rating">
-                    <span className="rating-value">{game.rating}</span>
+                  <div className={styles.gameRating}>
+                    <span className={styles.ratingValue}>{game.rating}</span>
                   </div>
                 )}
               </div>
@@ -92,7 +92,7 @@ export default function SearchBar() {
       )}
       
       {query.length > 2 && games.length === 0 && !loading && !error && showResults && (
-        <div className="no-results">
+        <div className={styles.noResults}>
           Aucun jeu trouvé pour cette recherche
         </div>
       )}
