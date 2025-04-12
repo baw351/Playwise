@@ -11,6 +11,7 @@ main{
   max-width: 1240px;
   margin: auto;
   padding: 1rem;
+  box-sizing: border-box;
 }
 
 h2 {
