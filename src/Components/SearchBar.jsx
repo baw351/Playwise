@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { searchGames } from '../services/rawgAPI';
-import styles from './SearchBar.module.css'; // Updated import to use the .module.css format
+import styles from './SearchBar.module.css';
 
 export default function SearchBar() {
   const [query, setQuery] = useState('');

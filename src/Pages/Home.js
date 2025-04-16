@@ -7,22 +7,22 @@ function Home() {
         <div className="home">
             <Header/>
             <main>
-                <div className='actus'>
+                <section className='actus'>
                     <h2>Actus récentes</h2>
-                </div>
-                <div className='jeux-populaires'>
+                </section>
+                <section className='jeux-populaires'>
                     <h2>Jeux Populaires</h2>
-                </div>
-                <div className='tendances'>
+                </section>
+                <section className='tendances'>
                     <h2>Tendances en ce moment</h2>
-                </div>
-                <div className='communauté'>
+                </section>
+                <section className='communauté'>
                     <h2>Communautés</h2>
-                </div>
+                </section>
             </main>
             <Footer/>
         </div>
     );
-}
+};
 
 export default Home;
