@@ -21,7 +21,12 @@ h2 {
   color: white;
   font-size: 2rem;
   margin: 0;
+  margin-bottom: 1rem;
   padding: 0.5rem 0;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
+}
+
+.section {
+  margin: 2rem 0;
 }
