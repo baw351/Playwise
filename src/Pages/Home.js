@@ -1,11 +1,10 @@
 import './Home.css';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
+import Layout from '../Components/Layout/Layout';
 
 function Home() {
     return (
         <div className="home">
-            <Header/>
+            <Layout>
             <main>
                 <section className='actus'>
                     <h2>Actus récentes</h2>
@@ -20,7 +19,7 @@ function Home() {
                     <h2>Communautés</h2>
                 </section>
             </main>
-            <Footer/>
+            </Layout>
         </div>
     );
 };
