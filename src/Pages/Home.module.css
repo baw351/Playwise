@@ -1,0 +1,32 @@
+.home{
+  display: flex;
+  flex-direction: column;
+  background-color: #0A0A0A;
+  min-height: 100vh;
+}
+
+main{
+  width: 100%;
+  flex: 1;
+  max-width: 1240px;
+  margin: auto;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: white;
+  font-size: 2rem;
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+.section {
+  margin: 2rem 0;
+}
