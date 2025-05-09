@@ -38,6 +38,7 @@ function formatGames(games) {
   return games.map(game => ({
     id: game.id,
     name: game.name,
+    image: game.background_image,
     background_image: game.background_image,
     released: game.released ? new Date(game.released).getFullYear() : 'N/A',
     rating: game.rating ? game.rating.toFixed(1) : 'N/A',
