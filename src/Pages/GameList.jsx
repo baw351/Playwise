@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import styles from './Home.module.css';
+import styles from './GameList.module.css';
 import Layout from '../Components/Layout/Layout';
-import HeroSection from '../Components/Home/HeroSection';
 import GameGrid from '../Components/Games/GameGrid';
 import { getPopularGames } from '../services/rawgAPI';
 
-function Home() {
+function GameList() {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -19,7 +18,6 @@ function Home() {
   return (
     <div className={styles.page}>
       <Layout>
-        <HeroSection />
         <section className={styles.section}>
           <h2>Jeux Populaires</h2>
           <GameGrid games={games} loading={loading} />
@@ -35,4 +33,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default GameList;
