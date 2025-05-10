@@ -1,0 +1,275 @@
+.create-tip-container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+  }
+  
+  .create-tip-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1.8rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0f0f0;
+    position: relative;
+  }
+  
+  .create-tip-container h2::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 80px;
+    height: 2px;
+    background: linear-gradient(to right, #7b61ff, #00adff);
+  }
+  
+  .tip-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  
+  .form-group label {
+    font-weight: 600;
+    color: #444;
+    font-size: 1rem;
+  }
+  
+  .form-group input[type="text"],
+  .form-group input[type="url"],
+  .form-group textarea {
+    padding: 0.8rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  
+  .form-group input[type="text"]:focus,
+  .form-group input[type="url"]:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #7b61ff;
+    box-shadow: 0 0 0 3px rgba(123, 97, 255, 0.2);
+  }
+  
+  .text-editor {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+  }
+  
+  .editor-toolbar {
+    display: flex;
+    gap: 0.5rem;
+    background-color: #f8f9fa;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .editor-toolbar button {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 0.4rem 0.7rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .editor-toolbar button:hover {
+    background-color: #eee;
+  }
+  
+  .text-editor textarea {
+    width: 100%;
+    border: none;
+    border-radius: 0;
+    padding: 1rem;
+    resize: vertical;
+    min-height: 200px;
+  }
+  
+  .text-editor textarea:focus {
+    outline: none;
+    box-shadow: none;
+  }
+  
+  .editor-help {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 0.5rem;
+  }
+  
+  .image-upload-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .image-upload-container input[type="file"] {
+    display: none;
+  }
+  
+  .image-upload-button {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background-color: #f0f2f5;
+    color: #333;
+    border: 1px dashed #ccc;
+    padding: 0.75rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .image-upload-button:hover {
+    background-color: #e4e6e9;
+    border-color: #7b61ff;
+  }
+  
+  .image-upload-button.disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+  
+  .image-previews {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .image-preview-item {
+    position: relative;
+    width: 120px;
+    height: 90px;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 2px solid #ddd;
+  }
+  
+  .image-preview-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .image-remove-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 24px;
+    height: 24px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    transition: background-color 0.2s;
+  }
+  
+  .image-remove-button:hover {
+    background-color: rgba(255, 0, 0, 0.7);
+  }
+  
+  .form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .btn-cancel {
+    background-color: #f0f2f5;
+    color: #333;
+    border: 1px solid #ddd;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  
+  .btn-cancel:hover {
+    background-color: #e4e6e9;
+  }
+  
+  .btn-submit {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: linear-gradient(135deg, #7b61ff 0%, #00adff 100%);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(123, 97, 255, 0.3);
+  }
+  
+  .btn-submit:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(123, 97, 255, 0.5);
+  }
+  
+  .btn-submit:disabled {
+    opacity: 0.7;
+    transform: none;
+    cursor: not-allowed;
+  }
+  
+  .spinner {
+    width: 18px;
+    height: 18px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+  }
+  
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .error-message {
+    background-color: #fdedee;
+    color: #d32f2f;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #d32f2f;
+  }
+  
+  @media (max-width: 768px) {
+    .create-tip-container {
+      padding: 1.5rem;
+      border-radius: 0;
+    }
+    
+    .form-actions {
+      flex-direction: column;
+    }
+    
+    .btn-cancel, .btn-submit {
+      width: 100%;
+      justify-content: center;
+    }
+  }

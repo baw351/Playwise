@@ -1,0 +1,161 @@
+.searchContainer {
+  width: 400px;
+  position: relative;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.searchInputContainer {
+  position: relative;
+  width: 100%;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 10px 40px 10px 12px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: #3578e5;
+  box-shadow: 0 0 0 2px rgba(158, 65, 234, 0.3);
+}
+
+.loadingIndicator {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #666;
+}
+
+.searchResults {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  max-height: 500px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  margin-top: 5px;
+  border: 1px solid #eee;
+}
+
+.resultsHeader {
+  padding: 8px 12px;
+  font-weight: bold;
+  background-color: #53b4e1;
+  color: white;
+  font-size: 14px;
+}
+
+.gameItem {
+  display: flex;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.gameItem:hover {
+  background-color: #f5f8fa;
+}
+
+.gameItem:last-child {
+  border-bottom: none;
+}
+
+.gameImage {
+  width: 50px;
+  height: 70px;
+  overflow: hidden;
+  margin-right: 10px;
+  background-color: #f0f0f0;
+  flex-shrink: 0;
+}
+
+.gameImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.noImage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 10px;
+  color: #999;
+  text-align: center;
+}
+
+.gameInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.gameTitle {
+  font-weight: bold;
+  font-size: 14px;
+  color: #6a2ea2;
+  margin-bottom: 3px;
+}
+
+.gameDetails {
+  font-size: 12px;
+  color: #666;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gameDetails span {
+  margin-right: 8px;
+}
+
+.platforms {
+  font-style: italic;
+}
+
+.gameRating {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.ratingValue {
+  font-weight: bold;
+  color: #e67e22;
+  font-size: 13px;
+}
+
+.errorMessage {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 5px;
+  padding: 5px;
+  background-color: #fadbd8;
+  border-radius: 3px;
+}
+
+.noResults {
+  padding: 15px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  border: 1px solid #eee;
+}

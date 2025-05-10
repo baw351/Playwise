@@ -1,0 +1,110 @@
+/* src/components/GameCard.css */
+.game-card {
+    display: block;
+    background-color: #2a2a3e;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    color: #e6e6e6;
+    text-decoration: none;
+  }
+  
+  .game-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  .game-card-image {
+    position: relative;
+    height: 150px;
+    overflow: hidden;
+  }
+  
+  .game-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+  
+  .game-card:hover .game-card-image img {
+    transform: scale(1.05);
+  }
+  
+  .metacritic-score {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-weight: bold;
+    font-size: 0.9rem;
+  }
+  
+  .metacritic-score.high {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  .metacritic-score.medium {
+    background-color: #FFC107;
+    color: #333;
+  }
+  
+  .metacritic-score.low {
+    background-color: #F44336;
+    color: white;
+  }
+  
+  .game-card-content {
+    padding: 15px;
+  }
+  
+  .game-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #fff;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.8rem;
+  }
+  
+  .game-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  .game-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star {
+    color: #FFC107;
+    margin-right: 4px;
+  }
+  
+  .game-genres {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  
+  .genre-tag {
+    font-size: 0.8rem;
+    padding: 3px 8px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    color: #ccc;
+  }
