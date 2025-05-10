@@ -1,0 +1,98 @@
+.header {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.headerContainer {
+  padding: 1rem;
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.logoImage {
+  height: 40px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navItem a:hover {
+  color: #61dafb;
+}
+
+.authContainer {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.authButton {
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.loginButton {
+  background-color: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.loginButton:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.registerButton {
+  background: linear-gradient(to right, #7b61ff, #00adff);
+  color: white;
+  box-shadow: 0 2px 8px rgba(123, 97, 255, 0.3);
+}
+
+.registerButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(123, 97, 255, 0.4);
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navList {
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,2 @@
+const RAWG_API_KEY = "Your api Key Here" // Replace with your actual API key
+export default RAWG_API_KEY;

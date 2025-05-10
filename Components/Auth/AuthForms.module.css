@@ -1,0 +1,111 @@
+.form {
+    padding: 20px;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .formGroup {
+    margin-bottom: 15px;
+  }
+  
+  .formGroup label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ccc;
+    font-size: 14px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 4px;
+    border: 1px solid #333;
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #7b61ff;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(123, 97, 255, 0.2);
+  }
+  
+  .submitButton {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    background: linear-gradient(to right, #7b61ff, #00adff);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(123, 97, 255, 0.2);
+  }
+  
+  .submitButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(123, 97, 255, 0.3);
+  }
+  
+  .submitButton:active {
+    transform: translateY(0);
+  }
+  
+  .submitButton:disabled {
+    background: #555;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
+  
+  .error {
+    background-color: rgba(220, 53, 69, 0.1);
+    color: #dc3545;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+    border-left: 3px solid #dc3545;
+  }
+  
+  .forgotPassword {
+    margin-top: 15px;
+    text-align: center;
+  }
+  
+  .linkButton {
+    background: none;
+    border: none;
+    color: #7b61ff;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: color 0.2s ease;
+  }
+  
+  .linkButton:hover {
+    color: #00adff;
+    text-decoration: underline;
+  }
+  
+  .switchForm {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #999;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+  }
