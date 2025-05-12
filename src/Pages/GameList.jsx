@@ -22,12 +22,6 @@ function GameList() {
           <h2>Jeux Populaires</h2>
           <GameGrid games={games} loading={loading} />
         </section>
-        <section className={styles.section}>
-          <h2>Actus récentes</h2>
-        </section>
-        <section className={styles.section}>
-          <h2>Tendances en ce moment</h2>
-        </section>
       </Layout>
     </div>
   );
