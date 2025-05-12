@@ -4,6 +4,7 @@ import Layout from '../Components/Layout/Layout';
 import HeroSection from '../Components/Home/HeroSection';
 import GameGrid from '../Components/Games/GameGrid';
 import { getPopularGames } from '../services/rawgAPI';
+import RecentTipsPlaceholder from '../Components/Home/RecentTipsPlaceholder';
 
 function Home() {
   const [games, setGames] = useState([]);
@@ -25,10 +26,8 @@ function Home() {
           <GameGrid games={games} loading={loading} />
         </section>
         <section className={styles.section}>
-          <h2>Actus récentes</h2>
-        </section>
-        <section className={styles.section}>
-          <h2>Tendances en ce moment</h2>
+          <h2>Dernières astuces</h2>
+          <RecentTipsPlaceholder/>
         </section>
       </Layout>
     </div>
